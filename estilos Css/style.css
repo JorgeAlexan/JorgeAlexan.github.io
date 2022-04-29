@@ -1,18 +1,21 @@
-
+/* selecotr universal */
 *{
     margin: 5px;
 }
 
+/* selector simple */
 body{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 h1{
     color: blue;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: underline; 
+/* selector simple */ 
 }
 
+/* selector de clase */
 .p1{
     font-size: 20px;
     color: blueviolet;
@@ -21,14 +24,19 @@ h1{
 }
 
 h2{
+/* espacio de los caracteres */
     letter-spacing: 8px;
+/* espacio entre letras */
+/* word-spacing:8px; */
     text-transform: uppercase;
+/* tex-decoration:line-through; */
+    text-shadow: 4px 2px black ; 
 }
 
 .p2{
-    color: blanchedalmond;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(126, 113, 95);
     text-align: justify;
     font-size: 20px;
     direction: rtl;
+    font-family: 'Water Brush', cursive;
 }
