@@ -1,0 +1,298 @@
+html{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: aquamarine;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*  se cambia modelo de letra */
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    background-color: greenyellow;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a{
+    font-weight: 700; /*Negrita */
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width:500px){
+    header{
+        flex-direction: column;
+    }
+    a{
+        color: blue;
+    }
+    h2{
+        color: brown;
+    }
+}
+
+.logo {
+    color: rgb(107, 166, 233);
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo {
+    text-align: center;
+    font-family: Arial Black;
+    font-weight: bold;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-shadow: -3px 3px rgb(12, 12, 12);
+}
+
+ul {
+    list-style: none;
+}
+
+.lista>li {
+    float: left;
+    list-style: none;
+}
+
+.lista li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 10px;
+    display: block;
+    font-size: 20px;
+    background-color: greenyellow;
+}
+
+.lista:hover {
+    background-color: greenyellow;
+}
+
+.lista li ul {
+    display: none;
+    position: absolute;
+    min-width: 50px;
+    list-style: none;
+}
+
+.lista li:hover>ul {
+    display: block;
+}
+
+.lista li ul li {
+    position: relative;
+    list-style: none;
+}
+
+.fotos h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aquamarine;
+}
+
+.turismo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.postal {
+    padding: 0 20px 20px;
+}
+
+.postal img{
+    width: 1300px;
+}
+
+.postal2 img{
+    width: 1300px;
+}
+
+img:hover {
+    filter: saturate(180%);
+}
+
+.postal{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px 20px;
+}
+
+.postal2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px 20px;
+}
+
+.postal3 img{
+    width: 1150px;
+}
+
+.bandera{
+    text-align: center;
+}
+
+.bandera2{
+    text-align: center;
+}
+
+.parrafo2{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.parrafo{
+    text-align: center;
+}
+
+.parrafo3{
+    text-align: center;
+    font-size: 35px;
+    text-decoration:underline;
+
+}
+
+nav a:hover{
+    color: white;
+}
+
+table{
+    /* cambio el tamaño de las columnas */
+    table-layout: auto; width: 25%;
+    /* table-layout: fixed; width: 20%; */
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.cabeza td{
+    background: #af9f9f;
+    color: #000000;
+    font-size: 25px;
+}
+
+td,tr{
+    width: 25%;
+    text-align: left;
+    /* solid, dashed, dotted */
+    border: 0.5px solid rgb(0, 0, 0); 
+    padding: 2px;
+    background-color: white;
+}
+
+.ciudades{
+    font-size: 35px;
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color:cyan
+
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pie-pagina .grupo-1 .box figure img{
+    margin-top: 30px;
+    width: 260px;
+    height: 100px;
+    
+}
+.pie-pagina .grupo-1 .box h2{
+    color:black;
+    margin-bottom: 25px;
+    font-size: 20px;
+
+}
+.pie-pagina .grupo-1 .box p{
+    color:rgb(red, green, blue);
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: aliceblue;
+    margin-right: 10px;
+    background-color:aquamarine;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: black;
+}
+
+.pie-pagina .grupo-2{
+    background-color:aquamarine;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
