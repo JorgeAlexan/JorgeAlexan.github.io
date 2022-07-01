@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo  Firebase</title>
+    <link rel="stylesheet" href="/estilos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+        </style>
+</head>
+<body class="login">
+    <h1>EMPRESA ELECTRÓNICA</h1>
+    
+    <h3>Registrarse</h3>
+    <p>Escriba su correo electrónico </p>
+    <input type="email" name="" id="email">
+    <p>Escriba su contraseña</p>
+    <input type="password" name="" id="pass">
+    <button id="ingresar" class="iniciar">REGÍSTRATE</button>
+    <br>
+    <hr>
+
+    <h3>INICIAR SESIÓN</h3>
+    <p>Si ya se registró, ingrese su cuenta</p>
+    <input type="email" name="" id="email1">
+    <p>Escriba su contraseña</p>
+    <input type="password" name="" id="pass1">
+
+    <button id="iniciar" class="iniciar">INICIAR SESION</button>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+        // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyBmwDgCeHUP8vC52Cdqzv6J4l5vxQUdcAE",
+        authDomain: "proyecto-4dedc.firebaseapp.com",
+        projectId: "proyecto-4dedc",
+        storageBucket: "proyecto-4dedc.appspot.com",
+        messagingSenderId: "186036861182",
+        appId: "1:186036861182:web:edeee735c3e61555720daf"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // creamos un evento click  al activar  el botón ingresar
+    document.getElementById("ingresar").addEventListener("click",function(){
+        //Generamos constantes
+        const email = document.getElementById("email").value
+        const password = document.getElementById("pass"). value
+
+        // Copio el acceso a estos elementos
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Creara el usuario de Firebase
+            const user = userCredential.user;
+            console.log("Cuenta creada")
+    // ...
+    })
+    .catch((error) => {
+        // Aparecerán errores de llenado
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    console.log(errorCode + errorMessage)
+});   
+    })
+
+    // Crearemos un evento para el boton iniciar 
+    document.getElementById("iniciar").addEventListener("click",function(){
+        const email1 = document.getElementById("email1").value;
+        const pass1 = document.getElementById("pass1").value;
+
+            signInWithEmailAndPassword(auth, email1, pass1)
+    .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        window.open("bienvenido.html","Página de bienvenida")
+        // console.log("Ya puedes ingresar a la nueva página")
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("Tu cuenta no existe")
+    });
+    })
+
+
+    </script>
+</body>
+</html>
